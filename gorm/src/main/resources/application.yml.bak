@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/springtestdev
+    username: bhagwat
+    password: kumar

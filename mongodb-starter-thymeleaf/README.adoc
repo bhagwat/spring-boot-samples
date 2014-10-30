@@ -1,0 +1,14 @@
+= Spring Boot image:https://build.spring.io/plugins/servlet/buildStatusImage/BOOT-PUB["Build Status", link="https://build.spring.io/browse/BOOT-PUB"]
+:docs: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference
+
+== Using MongoDB starter
+
+compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+== Configure database
+
+spring:
+  data:
+      mongodb:
+            uri: mongodb://localhost:2701
+            database: springtestdev

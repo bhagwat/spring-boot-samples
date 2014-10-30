@@ -1,0 +1,17 @@
+app:
+  name: Springboot+Config+Yml+Demo
+  version: 1.0.0
+server:
+  port: 8080
+
+---
+spring:
+    profiles: development
+server:
+    port: 9001
+
+---
+spring:
+    profiles: production
+app:
+    name: Spring-boot-config-yml-demo

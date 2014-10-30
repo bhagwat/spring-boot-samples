@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.8.RELEASE")
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'config-using-yml'
+    version = '1.0.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all'
+    compile 'org.springframework.boot:spring-boot-starter'
+}

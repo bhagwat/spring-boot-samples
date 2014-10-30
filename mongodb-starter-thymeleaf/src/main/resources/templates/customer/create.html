@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Spring boot</title>
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" href="../static/css/mobile.css" th:href="@{/css/mobile.css}"/>
+</head>
+
+<body>
+<div id="grailsLogo" role="banner"><a href="http://spring.io/">
+    <img src="/images/spring_logo.png" height="40px" alt="Spring boot"/></a></div>
+
+<a href="#list-customer" class="skip" tabindex="-1">Skip to content&hellip;</a>
+
+<div class="nav" role="navigation">
+    <ul>
+        <li><a class="home" href="/">List</a></li>
+    </ul>
+</div>
+
+<div id="create-person" class="content scaffold-create" role="main">
+    <h1>New Customer</h1>
+
+    <form action="#" th:action="@{/customer/save}" th:object="${customer}" method="post">
+        <fieldset class="form">
+            <div class="fieldcontain required">
+                <label for="firstName">
+                    First Name
+                    <span class="required-indicator">*</span>
+                </label>
+                <input type="text" required="" th:field="*{firstName}"/>
+            </div>
+            <div class="fieldcontain required">
+                <label for="lastName">
+                    Last Name
+                </label>
+                <input type="text" required="" th:field="*{lastName}"/>
+            </div>
+            <div class="fieldcontain required">
+                <label for="street">
+                    Street
+                </label>
+                <input type="text" required="" th:field="*{address.street}"/>
+            </div>
+            <div class="fieldcontain required">
+                <label for="city">
+                    City
+                </label>
+                <input type="text" required="" th:field="*{address.city}"/>
+            </div>
+        </fieldset>
+        <fieldset class="buttons">
+            <input type="submit" class="save" value="Save"/>
+        </fieldset>
+
+    </form>
+</div>
+
+<div class="footer" role="contentinfo"></div>
+
+<div id="spinner" class="spinner" style="display:none;">Loading&hellip;</div>
+<script src="../static/js/application.js" th:src="@{/js/application.js}"></script>
+</body>
+</html>

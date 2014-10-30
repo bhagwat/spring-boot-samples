@@ -1,0 +1,22 @@
+= Spring Boot image:https://build.spring.io/plugins/servlet/buildStatusImage/BOOT-PUB["Build Status", link="https://build.spring.io/browse/BOOT-PUB"]
+:docs: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference
+
+Application configuration using Yaml file.
+
+Create a file application.yaml in src/main/resources folder.
+A YAML file is actually a sequence of documents separated by --- lines, and each document is parsed separately to a flattened map.
+
+If a YAML document contains a spring.profiles key, then the profiles value (comma-separated list of profiles) is fed into the Spring Environment.acceptsProfiles() and if any of those profiles is active that document is included in the final merge (otherwise not).
+
+== Setting active profile using OS environment variable :
+
+export SPRING_PROFILES_ACTIVE=development
+gradle build
+java -jar build/libs/config-using-yml-1.0.0.jar
+
+
+== launch your application with a -D argument (remember to put it before the main class or jar archive):
+
+gradle build
+java -jar -Dspring.profiles.active=production build/libs/config-using-yml-1.0.0.jar
+

@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/gsptest
+    username: bhagwat
+    password: kumar
