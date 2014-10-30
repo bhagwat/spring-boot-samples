@@ -14,10 +14,13 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application);
         ConfigurableApplicationContext ctx = app.run(args);
-        YamlConfig yamlConfig = ctx.getBean("yamlConfig")
+        AppConfig appConfig = (AppConfig) ctx.getBean("appConfig")
         log.info "*" * 20
-        log.info "appName : " + yamlConfig.appName
+        log.info "appName : " + appConfig.appName
+        log.info "port : " + appConfig.port
+        AppInfo appInfo = (AppInfo) ctx.getBean("appInfo")
         log.info "*" * 20
-        log.info "port : " + yamlConfig.port
+        log.info appInfo.name
+        log.info appInfo.version
     }
 }
