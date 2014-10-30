@@ -1,4 +1,0 @@
-= Spring boot demo
-
-Working sample apps for spring boot.
-
